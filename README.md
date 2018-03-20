@@ -27,7 +27,6 @@ Korisnik ce imati opciju sign in pri samom otvaranju aplikacije, gdje ce se tra�
 -	Broj racuna
 -	Korisnicko ime
 -	Lozinka
--	Student/Penzioner (neobavezno polje)-služi kako bi navedene kategorije mogle poslti dokaz o svom statusu i ostavriti određeni popust
 
 ### Registracija firmi
 -	Naziv firme
