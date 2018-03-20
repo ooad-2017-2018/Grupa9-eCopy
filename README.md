@@ -9,8 +9,11 @@ Tema: Online kopirnica
 ## OPIS  TEME
 
 Aplikacija eCopy je aplikacija koja omogućava svojim korisnicima (kupcima) da koriste usluge kopirnice bez potrebe da je posjećuju, tj. online. Naime, zahvaljujući  ovoj aplikacije korisnik može putem svog uređaja (mobilnog telefona, laptopa i sl.), poslati dokumente za printanje, te odabrati način kopiranja koji želi (boja, format, uvez...). Pored usluga printanja na papiru, kopirnica nudi i druge usluge kao što je pravljenje personalizovanih šoljica, majica, termos boca, naljepnica te plakata, na korisniku je samo da putem ove aplikacije odabere  željeni predmet,  boju, natpis i/ili sliku), a kopirnica(odnosno radnik kopirnice) ima zadatak da obavi ono sto je korisnik tražio i pošalje mu proizvod na kućnu adresu (ukoliko je on to odabrao). Kopirnica također nudi usluge izrade reklamnih materijala za firme u vidu printanja na raznim predmetima koje korisnik može odabrati.
+
 Korisnici aplikacije imaju mogućnost da kreiraju vlastiti account kako bi ostvarili razne pogodnosti koje kopoirnica nudi, ali i olakšali sebi način naručivanja jer ne bi morali svaki put navoditi svoje podatke i mogli bi izvršiti online plaćanje. Ukoliko ne žele kreirati nalog mogu se prijaviti i kao gost. Pored korisnika (kupaca) i radnici kopirnice imaju svoj account na aplikaciji kako bi mogli primati narudžbe, te slati povratne informacije klijentima.
+
 Aplikacija je pogodna za ljude koji nemaju vremena posjećivati kopirnice i čekati da se ispuni njihov zahtjev, jer na ovaj način sve mogu obaviti u veoma kratkom roku i dobiti gotov proizvod na kućnu adresu jer aplikacija ima i opciju hitne narudžbe (koja se dodatno plaća).
+
 Ovu aplikaciju (sistem) može kupiti bilo koja kopirnica koja posjeduje ove usluge, a želi modernizovati svoj način rada.
 
 ## PROCESI
