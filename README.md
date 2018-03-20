@@ -95,19 +95,19 @@ Registrovani radnik će imati uvid u sve primljene narudžben i preuzeće one na
 
 ## FUNKCIONALNOSTI
 
--Mogućnost registracije korisnika
--Mogućnost registracije firme
--Slanje narudžbe za printanje
--Slanje narudžbe za izradu slika
--Slanje narudžbe za izradu personalizovanih predmeta
--Slanje narudžbe za izradu reklamnog materijala (važi samo za firme)
--Preuzimanje narudžbe od strane uposlenika
--Slanje povratne informacije klijentu o narudžbi
--Preuzimanje adrese i paketa za slanje od strane uposlenika(dostavljača)
+- Mogućnost registracije korisnika
+- Mogućnost registracije firme
+- Slanje narudžbe za printanje
+- Slanje narudžbe za izradu slika
+- Slanje narudžbe za izradu personalizovanih predmeta
+- Slanje narudžbe za izradu reklamnog materijala (važi samo za firme)
+- Preuzimanje narudžbe od strane uposlenika
+- Slanje povratne informacije klijentu o narudžbi
+- Preuzimanje adrese i paketa za slanje od strane uposlenika(dostavljača)
 
 ## AKTERI:
 
--Kupac: Online korisnik koji šalje svoje zahtjeve (fizičko lice ili firma)
--Administrator- Unosi nove radnike i održava aplikaciju, dodaje nove ponude isl.
--Radnik kopirnice-Ispunjava zahtjeve kupca
--Radnik dostavljač- Dobija zahtjev za pošiljku i dostavlja je na kućnu adresu
+- Kupac: Online korisnik koji šalje svoje zahtjeve (fizičko lice ili firma)
+- Administrator- Unosi nove radnike i održava aplikaciju, dodaje nove ponude isl.
+- Radnik kopirnice-Ispunjava zahtjeve kupca
+- Radnik dostavljač- Dobija zahtjev za pošiljku i dostavlja je na kućnu adresu
