@@ -26,5 +26,11 @@ namespace ECopy
         {
             this.InitializeComponent();
         }
+
+        private void registracijaZaFirmu_Click(object sender, RoutedEventArgs e)
+        {
+
+            this.Frame.Navigate(typeof(Registracija_firma));
+        }
     }
 }
