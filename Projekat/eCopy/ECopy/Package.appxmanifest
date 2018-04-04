@@ -7,14 +7,14 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="f5e84212-f4e7-4f08-a25e-b079a42d60ee"
+    Name="99347be8-8ee0-4354-9551-d7a794978253"
     Publisher="CN=User"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="f5e84212-f4e7-4f08-a25e-b079a42d60ee" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="99347be8-8ee0-4354-9551-d7a794978253" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>ProjekatECopy</DisplayName>
+    <DisplayName>ECopy</DisplayName>
     <PublisherDisplayName>User</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -30,12 +30,12 @@
   <Applications>
     <Application Id="App"
       Executable="$targetnametoken$.exe"
-      EntryPoint="ProjekatECopy.App">
+      EntryPoint="ECopy.App">
       <uap:VisualElements
-        DisplayName="ProjekatECopy"
+        DisplayName="ECopy"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="ProjekatECopy"
+        Description="ECopy"
         BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
