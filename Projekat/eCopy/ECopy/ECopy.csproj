@@ -102,9 +102,12 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
     <Compile Include="registracijaRadnika.xaml.cs">
       <DependentUpon>registracijaRadnika.xaml</DependentUpon>
     </Compile>
+=======
+>>>>>>> e4a0090f77558b6abb2228e632cb1d5eb62970b5
     <Compile Include="Registracija_f.xaml.cs">
       <DependentUpon>Registracija_f.xaml</DependentUpon>
     </Compile>
@@ -144,10 +147,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+<<<<<<< HEAD
     <Page Include="registracijaRadnika.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+=======
+>>>>>>> e4a0090f77558b6abb2228e632cb1d5eb62970b5
     <Page Include="Registracija_f.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
