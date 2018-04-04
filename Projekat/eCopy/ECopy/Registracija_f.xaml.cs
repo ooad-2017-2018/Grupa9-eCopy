@@ -13,34 +13,24 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
+// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace ECopy
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class Registracija_f : Page
     {
-        public MainPage()
+        public Registracija_f()
         {
             this.InitializeComponent();
         }
 
-        private void MessageTextBlock_SelectionChanged(System.Object sender, RoutedEventArgs e)
+        private void registracijaZaFirmu_Click(object sender, RoutedEventArgs e)
         {
 
-        }
-
-        private void Prijava_Click(object sender, RoutedEventArgs e)
-        {
-
-            this.Frame.Navigate(typeof(LogIn));
-        }
-
-        private void Registracija_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Registracija_f));
+            this.Frame.Navigate(typeof(Registracija_firma));
         }
     }
 }

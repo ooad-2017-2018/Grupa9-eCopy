@@ -144,6 +144,6 @@
         </RichTextBlock>
         <Button Name="narudzba" Content="Obavi narudzbu"/>
         <Button Name="Prijava" Content="Prijava" Click="Prijava_Click"/>
-        <Button Name="Registracija" Content="Registracija"/>
+        <Button Name="Registracija" Content="Registracija" Click="Registracija_Click"/>
     </Grid>
 </Page>
