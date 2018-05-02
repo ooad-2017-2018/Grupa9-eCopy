@@ -142,7 +142,7 @@
                 <Run Text="                                   DOSTAVA NA KUĆNU ADRESU" FontWeight="Bold" Foreground="#FFB84444" />
             </Paragraph>
         </RichTextBlock>
-        <Button Name="narudzba" Content="Obavi narudzbu"/>
+        <Button Name="narudzba" Content="Obavi narudzbu" Click="narudzba_Click"/>
         <Button Name="Prijava" Content="Prijava" Click="Prijava_Click"/>
         <Button Name="Registracija" Content="Registracija" Click="Registracija_Click"/>
     </Grid>

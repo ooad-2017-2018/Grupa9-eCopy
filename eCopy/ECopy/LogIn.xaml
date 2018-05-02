@@ -38,6 +38,12 @@
                         <Setter Target="potvrda.(button.Height)" Value="40"/>
                         <Setter Target="potvrda.(button.Margin)" Value="0,300,0,0"/>
 
+                        <Setter Target="povratak.(button.HorizontalAlignment)" Value="Center"/>
+                        <Setter Target="povratak.(button.Width)" Value="180"/>
+                        <Setter Target="povratak.(button.Height)" Value="40"/>
+                        <Setter Target="povratak.(button.Margin)" Value="0,390,0,0"/>
+
+
                     </VisualState.Setters>
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger MinWindowWidth="0"/>
@@ -67,6 +73,11 @@
                         <Setter Target="potvrda.(button.Width)" Value="200"/>
                         <Setter Target="potvrda.(button.Height)" Value="46"/>
                         <Setter Target="potvrda.(button.Margin)" Value="0,360,0,0"/>
+
+                        <Setter Target="povratak.(button.HorizontalAlignment)" Value="Center"/>
+                        <Setter Target="povratak.(button.Width)" Value="200"/>
+                        <Setter Target="povratak.(button.Height)" Value="46"/>
+                        <Setter Target="povratak.(button.Margin)" Value="0,460,0,0"/>
 
                     </VisualState.Setters>
                     <VisualState.StateTriggers>
@@ -98,7 +109,10 @@
                         <Setter Target="potvrda.(button.Height)" Value="50"/>
                         <Setter Target="potvrda.(button.Margin)" Value="0,400,0,0"/>
 
-
+                        <Setter Target="povratak.(button.HorizontalAlignment)" Value="Center"/>
+                        <Setter Target="povratak.(button.Width)" Value="200"/>
+                        <Setter Target="povratak.(button.Height)" Value="50"/>
+                        <Setter Target="povratak.(button.Margin)" Value="0,550,0,0"/>
 
                     </VisualState.Setters>
                     <VisualState.StateTriggers>
@@ -113,6 +127,7 @@
         <TextBox Name="imeBox"  />
         <TextBox Name="sifraBox" />
         <Button Name="potvrda" Content="Potvrdi" />
+        <Button Name="povratak" Content="Povratak" Click="povratak_Click" />
 
     </Grid>
 </Page>

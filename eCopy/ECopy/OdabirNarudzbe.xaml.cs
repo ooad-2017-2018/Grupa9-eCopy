@@ -20,9 +20,9 @@ namespace ECopy
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Registracija_firma : Page
+    public sealed partial class OdabirNarudzbe : Page
     {
-        public Registracija_firma()
+        public OdabirNarudzbe()
         {
             this.InitializeComponent();
         }
@@ -30,6 +30,29 @@ namespace ECopy
         private void povratak_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));
+        }
+
+        private void printanje_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(NarudzbaPrintanje));
+        }
+
+        private void izradapredmeta_Click(object sender, RoutedEventArgs e)
+        {
+
+            this.Frame.Navigate(typeof(NarudzbePersonalizovaniPredmeti));
+        }
+
+        private void izradaslike_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(NarudzbaFotografije));
+
+        }
+
+        private void izradamaterijala_Click(object sender, RoutedEventArgs e)
+        {
+
+            this.Frame.Navigate(typeof(NarudzbaReklamniMaterijal));
         }
     }
 }

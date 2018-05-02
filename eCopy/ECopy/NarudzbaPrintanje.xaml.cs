@@ -20,16 +20,22 @@ namespace ECopy
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Registracija_firma : Page
+    public sealed partial class NarudzbaPrintanje : Page
     {
-        public Registracija_firma()
+        public NarudzbaPrintanje()
         {
             this.InitializeComponent();
         }
 
         private void povratak_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(MainPage));
+
+            this.Frame.Navigate(typeof(OdabirNarudzbe));
+        }
+
+        private void uboji2_Checked(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -32,5 +32,10 @@ namespace ECopy
 
             this.Frame.Navigate(typeof(Registracija_firma));
         }
+
+        private void povratak_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+        }
     }
 }

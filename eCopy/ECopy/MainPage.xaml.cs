@@ -42,5 +42,10 @@ namespace ECopy
         {
             this.Frame.Navigate(typeof(Registracija_f));
         }
+
+        private void narudzba_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(OdabirNarudzbe));
+        }
     }
 }
