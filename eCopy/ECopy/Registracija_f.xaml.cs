@@ -12,6 +12,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using System.Windows;
+using Windows.UI.Popups;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -36,6 +38,29 @@ namespace ECopy
         private void povratak_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));
+        }
+        
+            private async void potvrda_Click(object sender, RoutedEventArgs e)
+        {
+            string ime = ime1Box.Text;
+            string prezime = prezimeBox.Text;
+            string adresa = adresaBox.Text;
+            string email = emailBox.Text;
+            string korisnicko = imeBox.Text;
+            string lozinka = sifraBox.Text;
+            string potvrda = potvrdasifrebox.Text;
+
+            if (!lozinka.Equals(potvrda))
+            {
+                MessageDialog showDialog1 = new MessageDialog("Lozinke se ne podudaraju");
+                await showDialog1.ShowAsync();
+            }
+            FizickoLice novo = new FizickoLice(ime, prezime, adresa, email, 000, korisnicko, lozinka, 000, 0);
+            KontejnerskaKlasa.registrovaniKorisnici.Add(novo);
+            //MessageBox.Show("Usoješno ste se registrovali");
+
+            MessageDialog showDialog = new MessageDialog("Uspješno ste se registrovali");
+            await showDialog.ShowAsync();
         }
     }
 }

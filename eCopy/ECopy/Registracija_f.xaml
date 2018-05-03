@@ -28,7 +28,7 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.Background>
-        <ImageBrush ImageSource="background.jpg"/>
+            <ImageBrush ImageSource="background.jpg"/>
         </Grid.Background>
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup x:Name="VisualStateGroup">
@@ -60,7 +60,7 @@
         </VisualStateManager.VisualStateGroups>
 
         <TextBlock Name="datum" Text="Datum rodjenja:        " Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right"/>
-        <DatePicker Name="date" Width="200" Grid.Row="1" Grid.Column="2" VerticalAlignment="Top"/>
+        <DatePicker Name="date"  Grid.Row="1" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
         <TextBlock Name="ime1" Text="Ime:          " Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right"/>
         <TextBlock Name="prezima" Text="Prezime:          " Grid.Row="3" Grid.Column="1" HorizontalAlignment="Right"/>
         <TextBox Name="ime1Box" Grid.Row="2" Grid.Column="2" VerticalAlignment="Top" />
@@ -68,14 +68,14 @@
         <TextBlock Name="adresa" Text="Adresa:          " Grid.Row="4" Grid.Column="1" HorizontalAlignment="Right"/>
         <TextBlock Name="email" Text="Email:          "  Grid.Row="5" Grid.Column="1" HorizontalAlignment="Right"/>
         <TextBox Name="adresaBox"  Grid.Row="4" Grid.Column="2" VerticalAlignment="Top"/>
-        <TextBox Name="emailBox" Grid.Row="5" Grid.Column="2" VerticalAlignment="Top" />
+        <TextBox Name="emailBox" Grid.Row="5" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Stretch" />
         <TextBlock Name="ime" Text="Korisnicko ime:          " Grid.Row="6" Grid.Column="1" HorizontalAlignment="Right"/>
         <TextBlock Name="sifra" Text="Lozinka:          " Grid.Row="7" Grid.Column="1" HorizontalAlignment="Right"/>
         <TextBox Name="imeBox"  Grid.Row="6" Grid.Column="2" VerticalAlignment="Top"/>
         <TextBox Name="sifraBox" Grid.Row="7" Grid.Column="2" VerticalAlignment="Top" />
         <TextBlock Name="potvrdasifre" Text="Potvrda lozinke:          " Grid.Row="8" Grid.Column="1" HorizontalAlignment="Right"/>
         <TextBox Name="potvrdasifrebox" Grid.Row="8" Grid.Column="2" VerticalAlignment="Top" />
-        <Button Name="potvrda" Content="Potvrdi"  Grid.Row="10" Grid.Column="2" HorizontalAlignment="Right"/>
+        <Button Name="potvrda" Content="Potvrdi"  Grid.Row="10" Grid.Column="2" HorizontalAlignment="Right" Click="potvrda_Click"/>
         <Button Name="povratak" Content="Povratak"  Grid.Row="10" Grid.Column="2" HorizontalAlignment="Left" Click="povratak_Click"/>
         <Button Name="registracijaZaFirmu" Content="Registracija firme"  Grid.Row="0" Grid.Column="3" HorizontalAlignment="Right" Click="registracijaZaFirmu_Click" />
     </Grid>

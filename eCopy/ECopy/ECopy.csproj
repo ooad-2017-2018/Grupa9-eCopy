@@ -95,6 +95,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Firma.cs" />
+    <Compile Include="FizickoLice.cs" />
+    <Compile Include="KontejnerskaKlasa.cs" />
     <Compile Include="LogIn.xaml.cs">
       <DependentUpon>LogIn.xaml</DependentUpon>
     </Compile>
@@ -113,9 +116,11 @@
     <Compile Include="NarudzbePersonalizovaniPredmeti.xaml.cs">
       <DependentUpon>NarudzbePersonalizovaniPredmeti.xaml</DependentUpon>
     </Compile>
+    <Compile Include="NeregistrovaniKorisnik.cs" />
     <Compile Include="OdabirNarudzbe.xaml.cs">
       <DependentUpon>OdabirNarudzbe.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Osoba.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registracija_f.xaml.cs">
       <DependentUpon>Registracija_f.xaml</DependentUpon>
@@ -123,6 +128,7 @@
     <Compile Include="Registracija_firma.xaml.cs">
       <DependentUpon>Registracija_firma.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RegistrovaniKorisnik.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
