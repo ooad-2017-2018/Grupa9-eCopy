@@ -136,7 +136,6 @@
       <DependentUpon>Registracija_firma.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\RegistrovaniKorisnik.cs" />
-    <Compile Include="Views\TestItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">

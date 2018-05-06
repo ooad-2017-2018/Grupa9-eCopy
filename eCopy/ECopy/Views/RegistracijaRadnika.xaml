@@ -92,8 +92,6 @@
         <Button Name="potvrda" Content="Potvrdi"  Grid.Row="8" Grid.Column="3" HorizontalAlignment="Right" Width="100" Height="50"/>
         <Button Name="povratak" Content="Povratak"  Grid.Row="8" HorizontalAlignment="Left"  Width="100" Height="50" Grid.Column="2" Click="povratak_Click" />
 
-        <Image Name="slika" Grid.Column="2" Grid.Row="6" HorizontalAlignment="Stretch" Source="printIcon.png" Stretch="Uniform"/>
-        <Button Name="Pronadji" Content="Nađi sliku"  Grid.Row="6" HorizontalAlignment="Center"  Width="200" Height="100" Grid.Column="3" />
-
+        <local:KontrolaZaUnosSlike Name="nadjisliku"  Grid.Row="6" Grid.Column="2"/>
     </Grid>
 </Page>

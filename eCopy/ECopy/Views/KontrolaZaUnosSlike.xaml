@@ -5,17 +5,14 @@
     xmlns:local="using:ECopy.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    d:DesignHeight="300"
-    d:DesignWidth="400">
-    
-    <StackPanel HorizontalAlignment="Center">
+    mc:Ignorable="d">
 
-        
-        <StackPanel Orientation="Horizontal">
-            <Image x:Name="slika1" Width="260" Height="240" />
-        </StackPanel>
-        <Button x:Name="Potvrdi" Width="260" Height="40" Content="Potvrdi" Click="Potvrdi_Click"/>
-
-    </StackPanel>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Image x:Name="slika1" Grid.Row="0" Source="printIcon.png" />
+    <Button x:Name="Potvrdi" Content="Nađi sliku" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="Potvrdi_Click_1"/>
+        </Grid>
 </UserControl>

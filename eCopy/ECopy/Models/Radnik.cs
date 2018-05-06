@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Xaml.Controls;
 
 namespace ECopy.Models
 {
@@ -15,6 +16,7 @@ namespace ECopy.Models
         private string pozicija;
         private float plata;
         private DateTime datumRodjenja;
+        private Image slika;
 
         public Radnik(string ime, string prezime, string korisnickoIme, string lozinka, string pozicija, float plata, DateTime datumRodjenja)
         {
@@ -34,5 +36,6 @@ namespace ECopy.Models
         public string Pozicija { get => pozicija; set => pozicija = value; }
         public float Plata { get => plata; set => plata = value; }
         public DateTime DatumRodjenja { get => datumRodjenja; set => datumRodjenja = value; }
+        public Image Slika { get => slika; set => slika = value; }
     }
 }
