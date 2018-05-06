@@ -95,40 +95,48 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Firma.cs" />
-    <Compile Include="FizickoLice.cs" />
-    <Compile Include="KontejnerskaKlasa.cs" />
-    <Compile Include="LogIn.xaml.cs">
+    <Compile Include="Models\Firma.cs" />
+    <Compile Include="Models\FizickoLice.cs" />
+    <Compile Include="Models\KontejnerskaKlasa.cs" />
+    <Compile Include="Models\Radnik.cs" />
+    <Compile Include="Views\KontrolaZaUnosSlike.xaml.cs">
+      <DependentUpon>KontrolaZaUnosSlike.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LogIn.xaml.cs">
       <DependentUpon>LogIn.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainPage.xaml.cs">
+    <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="NarudzbaFotografije.xaml.cs">
+    <Compile Include="Views\NarudzbaFotografije.xaml.cs">
       <DependentUpon>NarudzbaFotografije.xaml</DependentUpon>
     </Compile>
-    <Compile Include="NarudzbaPrintanje.xaml.cs">
+    <Compile Include="Views\NarudzbaPrintanje.xaml.cs">
       <DependentUpon>NarudzbaPrintanje.xaml</DependentUpon>
     </Compile>
-    <Compile Include="NarudzbaReklamniMaterijal.xaml.cs">
+    <Compile Include="Views\NarudzbaReklamniMaterijal.xaml.cs">
       <DependentUpon>NarudzbaReklamniMaterijal.xaml</DependentUpon>
     </Compile>
-    <Compile Include="NarudzbePersonalizovaniPredmeti.xaml.cs">
+    <Compile Include="Views\NarudzbePersonalizovaniPredmeti.xaml.cs">
       <DependentUpon>NarudzbePersonalizovaniPredmeti.xaml</DependentUpon>
     </Compile>
-    <Compile Include="NeregistrovaniKorisnik.cs" />
-    <Compile Include="OdabirNarudzbe.xaml.cs">
+    <Compile Include="Models\NeregistrovaniKorisnik.cs" />
+    <Compile Include="Views\OdabirNarudzbe.xaml.cs">
       <DependentUpon>OdabirNarudzbe.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Osoba.cs" />
+    <Compile Include="Models\Osoba.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Registracija_f.xaml.cs">
+    <Compile Include="Views\RegistracijaRadnika.xaml.cs">
+      <DependentUpon>RegistracijaRadnika.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Registracija_f.xaml.cs">
       <DependentUpon>Registracija_f.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Registracija_firma.xaml.cs">
+    <Compile Include="Views\Registracija_firma.xaml.cs">
       <DependentUpon>Registracija_firma.xaml</DependentUpon>
     </Compile>
-    <Compile Include="RegistrovaniKorisnik.cs" />
+    <Compile Include="Models\RegistrovaniKorisnik.cs" />
+    <Compile Include="Views\TestItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -137,9 +145,9 @@
     <None Include="ECopy_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="background.jpg" />
-    <Content Include="pozadinaPocetna.jpg" />
-    <Content Include="printIcon.png" />
+    <Content Include="Views\background.jpg" />
+    <Content Include="Views\pozadinaPocetna.jpg" />
+    <Content Include="Views\printIcon.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -154,39 +162,47 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="LogIn.xaml">
+    <Page Include="Views\KontrolaZaUnosSlike.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="NarudzbaFotografije.xaml">
+    <Page Include="Views\LogIn.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="NarudzbaPrintanje.xaml">
+    <Page Include="Views\MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\NarudzbaFotografije.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="NarudzbaReklamniMaterijal.xaml">
+    <Page Include="Views\NarudzbaPrintanje.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="NarudzbePersonalizovaniPredmeti.xaml">
+    <Page Include="Views\NarudzbaReklamniMaterijal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="OdabirNarudzbe.xaml">
+    <Page Include="Views\NarudzbePersonalizovaniPredmeti.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Registracija_f.xaml">
+    <Page Include="Views\OdabirNarudzbe.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Registracija_firma.xaml">
+    <Page Include="Views\RegistracijaRadnika.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Registracija_f.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Registracija_firma.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -195,6 +211,9 @@
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.0.6</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ViewModels\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

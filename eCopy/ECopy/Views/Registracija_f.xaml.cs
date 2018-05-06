@@ -62,5 +62,10 @@ namespace ECopy
             MessageDialog showDialog = new MessageDialog("Uspješno ste se registrovali");
             await showDialog.ShowAsync();
         }
+
+        private void registracijaZaRadnka_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Views.RegistracijaRadnika));
+        }
     }
 }
