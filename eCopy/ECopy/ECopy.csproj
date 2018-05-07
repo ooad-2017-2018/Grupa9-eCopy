@@ -99,6 +99,9 @@
     <Compile Include="Models\FizickoLice.cs" />
     <Compile Include="Models\KontejnerskaKlasa.cs" />
     <Compile Include="Models\Radnik.cs" />
+    <Compile Include="Views\KontrolaZaOdabirNarudzbe.xaml.cs">
+      <DependentUpon>KontrolaZaOdabirNarudzbe.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\KontrolaZaUnosSlike.xaml.cs">
       <DependentUpon>KontrolaZaUnosSlike.xaml</DependentUpon>
     </Compile>
@@ -161,6 +164,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Views\KontrolaZaOdabirNarudzbe.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\KontrolaZaUnosSlike.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
