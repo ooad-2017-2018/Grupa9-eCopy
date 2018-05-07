@@ -210,6 +210,9 @@
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.0.6</Version>
     </PackageReference>
+    <PackageReference Include="WinUX.UWP">
+      <Version>2.4.17005.1</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewModels\" />

@@ -47,8 +47,8 @@ namespace ECopy
             string adresa = adresaBox.Text;
             string email = emailBox.Text;
             string korisnicko = imeBox.Text;
-            string lozinka = sifraBox.Text;
-            string potvrda = potvrdasifrebox.Text;
+            string lozinka = sifraBox.Password.ToString();
+            string potvrda = potvrdasifrebox.Password.ToString();
 
             if (!lozinka.Equals(potvrda))
             {
@@ -57,7 +57,7 @@ namespace ECopy
             }
             FizickoLice novo = new FizickoLice(ime, prezime, adresa, email, 000, korisnicko, lozinka, 000, 0);
             KontejnerskaKlasa.registrovaniKorisnici.Add(novo);
-            //MessageBox.Show("Usoješno ste se registrovali");
+            //MessageBox.Show("Uspješno ste se registrovali");
 
             MessageDialog showDialog = new MessageDialog("Uspješno ste se registrovali");
             await showDialog.ShowAsync();

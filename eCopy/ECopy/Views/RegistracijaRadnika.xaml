@@ -82,11 +82,11 @@
 
 
         <TextBlock Name="lozinka1" Text="Lozinka:" Grid.Row="4" Grid.Column="3" HorizontalAlignment="Center"/>
-        <TextBox Name="lozinka2" Grid.Row="4" Grid.Column="4" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
+        <PasswordBox Name="lozinka2" Grid.Row="4" Grid.Column="4" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
 
 
         <TextBlock Name="potvrdalozinka1" Text="Potvrda lozinke:" Grid.Row="5" Grid.Column="3" HorizontalAlignment="Center"/>
-        <TextBox Name="potvrdalozinka2" Grid.Row="5" Grid.Column="4" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
+        <PasswordBox Name="potvrdalozinka2" Grid.Row="5" Grid.Column="4" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
 
 
         <Button Name="potvrda" Content="Potvrdi"  Grid.Row="8" Grid.Column="3" HorizontalAlignment="Right" Width="100" Height="50"/>

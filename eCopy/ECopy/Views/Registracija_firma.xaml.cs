@@ -18,6 +18,7 @@ using Windows.UI.Popups;
 
 namespace ECopy
 {
+
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
@@ -41,8 +42,8 @@ namespace ECopy
             string adresa = adresaBox.Text;
             string email = emailBox.Text;
             string korisnicko = imeBox.Text;
-            string lozinka = sifraBox.Text;
-            string potvrda = potvrdasifrebox.Text;
+            string lozinka = sifraBox.Password.ToString();
+            string potvrda = potvrdasifrebox.Password.ToString();
             string racun = racunBox.Text;
 
             if (!lozinka.Equals(potvrda))
@@ -58,4 +59,5 @@ namespace ECopy
             await showDialog.ShowAsync();
         }
     }
+
 }
