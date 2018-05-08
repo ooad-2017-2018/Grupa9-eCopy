@@ -99,6 +99,10 @@
     <Compile Include="Models\FizickoLice.cs" />
     <Compile Include="Models\KontejnerskaKlasa.cs" />
     <Compile Include="Models\Radnik.cs" />
+    <Compile Include="ViewModels\KorisnikViewModel.cs" />
+    <Compile Include="ViewModels\NarudzbaViewModel.cs" />
+    <Compile Include="ViewModels\RacunViewModel.cs" />
+    <Compile Include="ViewModels\RadnikViewModel.cs" />
     <Compile Include="Views\KontrolaZaOdabirNarudzbe.xaml.cs">
       <DependentUpon>KontrolaZaOdabirNarudzbe.xaml</DependentUpon>
     </Compile>
@@ -221,9 +225,7 @@
       <Version>2.4.17005.1</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ViewModels\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
