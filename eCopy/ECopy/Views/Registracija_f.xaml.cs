@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Navigation;
 using System.Windows;
 using Windows.UI.Popups;
 using Microsoft.WindowsAzure.MobileServices;
+using Windows.UI;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -54,26 +55,47 @@ namespace ECopy
             string potvrda = potvrdasifrebox.Password.ToString();
             //DateTime datum = (DateTime) date.Date;
 
-            if (!lozinka.Equals(potvrda))
+
+            greska1.Foreground = new SolidColorBrush(Colors.Red);
+
+            if (ime.Length==0 || prezime.Length == 0 || adresa.Length==0 || email.Length==0 || korisnicko.Length==0 )
             {
-                MessageDialog showDialog1 = new MessageDialog("Lozinke se ne podudaraju");
-                await showDialog1.ShowAsync();
+                greska1.Text = "Morate popuniti sva polja!";
             }
-            FizickoLice novo = new FizickoLice();
-            novo.id = 0;
-            novo.Ime = ime;
-            novo.prezime = prezime;
-            novo.adresa = adresa;
-            novo.email = email;
-            novo.korisnickoIme = korisnicko;
-            novo.lozinka = lozinka;
+            else if (lozinka.Length <= 3)
+            {
+                greska1.Text = "Lozinka mora imati više od tri znaka!";
+            }
+            else if (korisnicko.Length <= 3)
+            {
+                greska1.Text = "Korisničko ime mora imati više od tri znaka!";
+            }
+            else if (!email.Contains("@") || !email.Contains("."))
+            {
+                greska1.Text = "Neispravan format emaila!";
+            }
+            else if (!lozinka.Equals(potvrda))
+            {
+                greska1.Text = "Lozinke se ne podudaraju!";
+            }
+            
+            else
+            {
+                greska1.Text = " ";
+                FizickoLice novo = new FizickoLice();
+                novo.id = 0;
+                novo.Ime = ime;
+                novo.prezime = prezime;
+                novo.adresa = adresa;
+                novo.email = email;
+                novo.korisnickoIme = korisnicko;
+                novo.lozinka = lozinka;
 
-            tabelaFizickoLice.InsertAsync(novo);
+                tabelaFizickoLice.InsertAsync(novo);
 
-            //KontejnerskaKlasa.registrovaniKorisnici.Add(novo);
-
-            MessageDialog showDialog = new MessageDialog("Uspješno ste se registrovali");
-            await showDialog.ShowAsync();
+                MessageDialog showDialog = new MessageDialog("Uspješno ste se registrovali");
+                await showDialog.ShowAsync();
+            }
         }
 
         private void registracijaZaRadnka_Click(object sender, RoutedEventArgs e)

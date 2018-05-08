@@ -13,6 +13,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.UI.Popups;
+using Windows.UI;
+using Microsoft.WindowsAzure.MobileServices;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -33,9 +35,20 @@ namespace ECopy
         {
             this.Frame.Navigate(typeof(MainPage));
         }
+        bool IsDigitsOnly(string str)
+        {
+            foreach (char c in str)
+            {
+                if (c < '0' || c > '9')
+                    return false;
+            }
 
+            return true;
+        }
         private async void potvrda_Click(object sender, RoutedEventArgs e)
         {
+            IMobileServiceTable<Firma> tabelaFirma = App.MobileService.GetTable<Firma>();
+
             string naziv = imefirmeBox.Text;
             string ime = ime1Box.Text;
             string prezime = prezimeBox.Text;
@@ -46,17 +59,45 @@ namespace ECopy
             string potvrda = potvrdasifrebox.Password.ToString();
             string racun = racunBox.Text;
 
-            if (!lozinka.Equals(potvrda))
-            {
-                MessageDialog showDialog1 = new MessageDialog("Lozinke se ne podudaraju");
-                await showDialog1.ShowAsync();
-            }
-            Firma novo = new Firma(naziv, ime, prezime, adresa, email, 000, korisnicko, lozinka, 000);
-            KontejnerskaKlasa.registrovaniKorisnici.Add(novo);
-            //MessageBox.Show("Usoješno ste se registrovali");
+            greska1.Foreground = new SolidColorBrush(Colors.Red);
 
-            MessageDialog showDialog = new MessageDialog("Uspješno ste se registrovali kao firma");
-            await showDialog.ShowAsync();
+            if (naziv.Length == 0 || ime.Length == 0 || prezime.Length == 0 || adresa.Length == 0 || email.Length == 0 || korisnicko.Length == 0)
+            {
+                greska1.Text = "Morate popuniti sva polja!";
+            }
+            else if (lozinka.Length <= 3)
+            {
+                greska1.Text = "Lozinka mora imati više od tri znaka!";
+            }
+            else if (korisnicko.Length <= 3)
+            {
+                greska1.Text = "Korisničko ime mora imati više od tri znaka!";
+            }
+            else if (!email.Contains("@") || !email.Contains("."))
+            {
+                greska1.Text = "Neispravan format emaila!";
+            }
+            else if (!lozinka.Equals(potvrda))
+            {
+                greska1.Text = "Lozinke se ne podudaraju!";
+            }
+            else if (!IsDigitsOnly(racun) || racun.Length<=8)
+            {
+                greska1.Text = "Neispravan broj racuna!";
+            }
+            else
+            {
+                greska1.Text = " ";
+                Firma novo = new Firma(naziv, ime, prezime, adresa, email, 000, korisnicko, lozinka, 000);
+                novo.Id = 0;
+
+                tabelaFirma.InsertAsync(novo);
+                
+                //MessageBox.Show("Usoješno ste se registrovali");
+
+                MessageDialog showDialog = new MessageDialog("Uspješno ste se registrovali kao firma");
+                await showDialog.ShowAsync();
+            }
         }
     }
 

@@ -80,5 +80,6 @@
       
         <Button Name="registracijaZaFirmu" Content="Registracija firme"  Grid.Row="0" Grid.Column="3" HorizontalAlignment="Right" Click="registracijaZaFirmu_Click" />
         <Button Name="registracijaZaRadnka" Content="Registracija radnika"  Grid.Row="0" Grid.Column="3" HorizontalAlignment="Left" Click="registracijaZaRadnka_Click" />
+        <TextBlock Name="greska1" Text=" " Grid.Row="9" Grid.Column="2" HorizontalAlignment="Center" FontStyle="Oblique" FontStretch="Normal" OpticalMarginAlignment="None" TextTrimming="None" FontSize="18"/>
     </Grid>
 </Page>
