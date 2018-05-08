@@ -143,9 +143,6 @@
       <DependentUpon>Registracija_firma.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\RegistrovaniKorisnik.cs" />
-    <Compile Include="Views\UnosPodatakaNeregistrovanihKorisnika.xaml.cs">
-      <DependentUpon>UnosPodatakaNeregistrovanihKorisnika.xaml</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -219,12 +216,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\UnosPodatakaNeregistrovanihKorisnika.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.Mobile.Client">
+      <Version>4.0.2</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.0.6</Version>
     </PackageReference>

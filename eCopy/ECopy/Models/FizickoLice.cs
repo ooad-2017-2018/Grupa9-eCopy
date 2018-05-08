@@ -6,15 +6,48 @@ using System.Threading.Tasks;
 
 namespace ECopy
 {
-    class FizickoLice: RegistrovaniKorisnik
+    class FizickoLice
     {
-        private long brojNarudzbi;
 
-        public FizickoLice(string ime, string prezime, string adresa, string email, long broj, string korisnickoIme, string lozinka, long brojRacuna, long brojNarudzbi): base(ime, prezime, adresa, email, broj, korisnickoIme, lozinka, brojRacuna)
+        public int id
         {
-            this.brojNarudzbi = brojNarudzbi;
+            get;
+            set;
         }
-
-        public long BrojNarudzbi { get => brojNarudzbi; set => brojNarudzbi = value; }
+        public string Ime
+        {
+            get;
+            set;
+        }
+        public string prezime
+        {
+            get;
+            set;
+        }
+        public string adresa
+        {
+            get;
+            set;
+        }
+        public string email
+        {
+            get;
+            set;
+        }
+        public string korisnickoIme
+        {
+            get;
+            set;
+        }
+        public string lozinka
+        {
+            get;
+            set;
+        }
+        public DateTime datumRodjenja
+        {
+            get;
+            set;
+        }
     }
 }

@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using System.Windows;
 using Windows.UI.Popups;
+using Microsoft.WindowsAzure.MobileServices;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -42,6 +43,8 @@ namespace ECopy
         
             private async void potvrda_Click(object sender, RoutedEventArgs e)
         {
+            IMobileServiceTable<FizickoLice> tabelaFizickoLice = App.MobileService.GetTable<FizickoLice>();
+
             string ime = ime1Box.Text;
             string prezime = prezimeBox.Text;
             string adresa = adresaBox.Text;
@@ -49,15 +52,25 @@ namespace ECopy
             string korisnicko = imeBox.Text;
             string lozinka = sifraBox.Password.ToString();
             string potvrda = potvrdasifrebox.Password.ToString();
+            //DateTime datum = (DateTime) date.Date;
 
             if (!lozinka.Equals(potvrda))
             {
                 MessageDialog showDialog1 = new MessageDialog("Lozinke se ne podudaraju");
                 await showDialog1.ShowAsync();
             }
-            FizickoLice novo = new FizickoLice(ime, prezime, adresa, email, 000, korisnicko, lozinka, 000, 0);
-            KontejnerskaKlasa.registrovaniKorisnici.Add(novo);
-            //MessageBox.Show("Uspješno ste se registrovali");
+            FizickoLice novo = new FizickoLice();
+            novo.id = 0;
+            novo.Ime = ime;
+            novo.prezime = prezime;
+            novo.adresa = adresa;
+            novo.email = email;
+            novo.korisnickoIme = korisnicko;
+            novo.lozinka = lozinka;
+
+            tabelaFizickoLice.InsertAsync(novo);
+
+            //KontejnerskaKlasa.registrovaniKorisnici.Add(novo);
 
             MessageDialog showDialog = new MessageDialog("Uspješno ste se registrovali");
             await showDialog.ShowAsync();
