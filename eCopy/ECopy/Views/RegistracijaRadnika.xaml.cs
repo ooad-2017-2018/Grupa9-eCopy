@@ -12,6 +12,10 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using System.Windows;
+using Windows.UI.Popups;
+using Microsoft.WindowsAzure.MobileServices;
+using Windows.UI;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -32,5 +36,53 @@ namespace ECopy.Views
 
             this.Frame.Navigate(typeof(MainPage));
         }
+
+        private async void potvrda_Click(object sender, RoutedEventArgs e)
+        {
+            IMobileServiceTable<ECopy.Models.Radnik> tabelaRadnici = App.MobileService.GetTable< ECopy.Models.Radnik> ();
+
+            string ime = ime1.Text;
+            string prezime = prezime2.Text;
+            object Temp = pozicija2.SelectedItem;
+            string pozicija = Temp.ToString();
+            string plata = plata2.Text;
+            string korisnicko = korisnicko2.Text;
+            string lozinka = lozinka2.Password.ToString();
+            string potvrda = potvrdalozinka2.Password.ToString();
+           // DateTime datum = dat2.;
+
+
+            greska1.Foreground = new SolidColorBrush(Colors.Red);
+
+            if (ime.Length == 0 || prezime.Length == 0 || pozicija.Length == 0 || plata.Length == 0 || korisnicko.Length == 0)
+            {
+                greska1.Text = "Morate popuniti sva polja!";
+            }
+            else if (lozinka.Length <= 3)
+            {
+                greska1.Text = "Lozinka mora imati više od tri znaka!";
+            }
+            else if (korisnicko.Length <= 3)
+            {
+                greska1.Text = "Korisničko ime mora imati više od tri znaka!";
+            }
+            else if (!lozinka.Equals(potvrda))
+            {
+                greska1.Text = "Lozinke se ne podudaraju!";
+            }
+
+            else
+            {
+                greska1.Text = " ";
+                ECopy.Models.Radnik novi = new ECopy.Models.Radnik(ime,prezime, korisnicko, lozinka, pozicija, float.Parse(plata), default(DateTime));
+              
+
+                tabelaRadnici.InsertAsync(novi);
+
+                MessageDialog showDialog = new MessageDialog("Uspješno ste se registrovali");
+                await showDialog.ShowAsync();
+            }
+        }
+
     }
 }

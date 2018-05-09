@@ -152,6 +152,9 @@
       <DependentUpon>Registracija_firma.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\RegistrovaniKorisnik.cs" />
+    <Compile Include="Views\UnosPodatakaNeregistriranihKorisnika.xaml.cs">
+      <DependentUpon>UnosPodatakaNeregistriranihKorisnika.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -226,6 +229,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Registracija_firma.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UnosPodatakaNeregistriranihKorisnika.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

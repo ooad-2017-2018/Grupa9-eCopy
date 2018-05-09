@@ -78,7 +78,7 @@
 
 
         <TextBlock Name="korisnicko1" Text="Korisničko ime:" Grid.Row="3" Grid.Column="3" HorizontalAlignment="Center"/>
-        <TextBox Name="korisnicko2" Grid.Row="3" Grid.Column="4" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
+        <TextBox Name="korisnicko2" Grid.Row="3" Grid.Column="4" VerticalAlignment="Top" HorizontalAlignment="Stretch"/> 
 
 
         <TextBlock Name="lozinka1" Text="Lozinka:" Grid.Row="4" Grid.Column="3" HorizontalAlignment="Center"/>
@@ -89,9 +89,11 @@
         <PasswordBox Name="potvrdalozinka2" Grid.Row="5" Grid.Column="4" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
 
 
-        <Button Name="potvrda" Content="Potvrdi"  Grid.Row="8" Grid.Column="3" HorizontalAlignment="Right" Width="100" Height="50"/>
+        <Button Name="potvrda" Content="Potvrdi"  Grid.Row="8" Grid.Column="3" HorizontalAlignment="Right" Width="100" Height="50" Click="potvrda_Click"/>
         <Button Name="povratak" Content="Povratak"  Grid.Row="8" HorizontalAlignment="Left"  Width="100" Height="50" Grid.Column="2" Click="povratak_Click" />
 
         <local:KontrolaZaUnosSlike Name="nadjisliku"  Grid.Row="6" Grid.Column="2"/>
+        <TextBlock Name="greska1" Text=" " Grid.Row="6" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Top" FontStyle="Oblique" FontStretch="Normal" OpticalMarginAlignment="None" TextTrimming="None" FontSize="18"/>
+
     </Grid>
 </Page>

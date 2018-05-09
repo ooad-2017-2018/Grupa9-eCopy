@@ -77,8 +77,7 @@ namespace ECopy
             else if (!lozinka.Equals(potvrda))
             {
                 greska1.Text = "Lozinke se ne podudaraju!";
-            }
-            
+            }            
             else
             {
                 greska1.Text = " ";

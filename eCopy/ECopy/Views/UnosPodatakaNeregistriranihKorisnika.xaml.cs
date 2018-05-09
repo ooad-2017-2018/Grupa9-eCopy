@@ -15,26 +15,22 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace ECopy
+namespace ECopy.Views
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class LogIn : Page
+    public sealed partial class UnosPodatakaNeregistriranihKorisnika : Page
     {
-        public LogIn()
+        public UnosPodatakaNeregistriranihKorisnika()
         {
-            this.InitializeComponent();
+     //       this.InitializeComponent();
         }
 
         private void povratak_Click(object sender, RoutedEventArgs e)
         {
+
             this.Frame.Navigate(typeof(MainPage));
-        }
-
-        private void login_Loaded(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
