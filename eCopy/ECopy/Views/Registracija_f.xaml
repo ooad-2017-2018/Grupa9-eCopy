@@ -77,9 +77,7 @@
         <PasswordBox Name="potvrdasifrebox" Grid.Row="8" Grid.Column="2" VerticalAlignment="Top" />
         <Button Name="potvrda" Content="Potvrdi"  Grid.Row="10" Grid.Column="2" HorizontalAlignment="Right" Click="potvrda_Click"/>
         <Button Name="povratak" Content="Povratak"  Grid.Row="10" Grid.Column="2" HorizontalAlignment="Left" Click="povratak_Click"/>
-      
         <Button Name="registracijaZaFirmu" Content="Registracija firme"  Grid.Row="0" Grid.Column="3" HorizontalAlignment="Right" Click="registracijaZaFirmu_Click" />
-        
         <TextBlock Name="greska1" Text=" " Grid.Row="9" Grid.Column="2" HorizontalAlignment="Center" FontStyle="Oblique" FontStretch="Normal" OpticalMarginAlignment="None" TextTrimming="None" FontSize="18"/>
     </Grid>
 </Page>

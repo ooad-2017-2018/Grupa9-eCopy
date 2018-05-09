@@ -17,6 +17,11 @@ namespace ECopy.Models
         private float plata;
         private DateTime datumRodjenja;
         private Image slika;
+        public int id
+        {
+            get;
+            set;
+        }
 
         public Radnik(string ime, string prezime, string korisnickoIme, string lozinka, string pozicija, float plata, DateTime datumRodjenja)
         {

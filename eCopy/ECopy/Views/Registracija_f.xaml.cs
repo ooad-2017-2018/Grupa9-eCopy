@@ -26,6 +26,7 @@ namespace ECopy
     /// </summary>
     public sealed partial class Registracija_f : Page
     {
+        IMobileServiceTable<FizickoLice> tabelaFizickoLice = App.MobileService.GetTable<FizickoLice>();
         public Registracija_f()
         {
             this.InitializeComponent();
@@ -44,7 +45,7 @@ namespace ECopy
         
             private async void potvrda_Click(object sender, RoutedEventArgs e)
         {
-            IMobileServiceTable<FizickoLice> tabelaFizickoLice = App.MobileService.GetTable<FizickoLice>();
+            
 
             string ime = ime1Box.Text;
             string prezime = prezimeBox.Text;

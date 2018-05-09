@@ -39,7 +39,7 @@ namespace ECopy.Views
 
         private async void potvrda_Click(object sender, RoutedEventArgs e)
         {
-            IMobileServiceTable<ECopy.Models.Radnik> tabelaRadnici = App.MobileService.GetTable< ECopy.Models.Radnik> ();
+            IMobileServiceTable<Models.Radnik> tabelaRadnici = App.MobileService.GetTable <Models.Radnik> ();
 
             string ime = ime1.Text;
             string prezime = prezime2.Text;
@@ -75,7 +75,7 @@ namespace ECopy.Views
             {
                 greska1.Text = " ";
                 ECopy.Models.Radnik novi = new ECopy.Models.Radnik(ime,prezime, korisnicko, lozinka, pozicija, float.Parse(plata), default(DateTime));
-              
+                novi.id = 0;
 
                 tabelaRadnici.InsertAsync(novi);
 

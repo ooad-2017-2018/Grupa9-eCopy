@@ -73,7 +73,7 @@
         <PasswordBox Name="sifraBox" Grid.Row="4" Grid.Column="2" VerticalAlignment="Top" RequestedTheme="Default" Visibility="Visible" />
         <TextBlock Name="potvrdasifre" Text="Potvrda nove lozinke:          " Grid.Row="5" Grid.Column="1" HorizontalAlignment="Right"/>
         <PasswordBox Name="potvrdasifrebox" Grid.Row="5" Grid.Column="2" VerticalAlignment="Top" />
-        <Button Name="potvrda" Content="Potvrdi"  Grid.Row="7" Grid.Column="2" HorizontalAlignment="Right" Click="potvrda_Click"/>
+        <Button Name="potvrda" Content="Potvrdi"  Grid.Row="7" Grid.Column="2" HorizontalAlignment="Right" Click="potvrda_Click" />
         <Button Name="povratak" Content="Povratak"  Grid.Row="7" Grid.Column="2" HorizontalAlignment="Left" Click="povratak_Click"/>
 
 

@@ -71,7 +71,11 @@
         <CalendarDatePicker Name="dat2" Grid.Row="4" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Stretch" Height="30"/>
 
         <TextBlock Name="pozicija1" Text="Pozicija:" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Center"/>
-        <ComboBox Name="pozicija2" Grid.Row="5" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
+        <ComboBox Name="pozicija2" Grid.Row="5" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Stretch" DisplayMemberPath="">
+            <ComboBoxItem Content="Radnik na poslovima kopiranja"/>
+            <ComboBoxItem Content="Adminstrator"/>
+            <ComboBoxItem Content="Dostavljac"/>
+        </ComboBox>
 
         <TextBlock Name="plata1" Text="Plata:" Grid.Row="2" Grid.Column="3" HorizontalAlignment="Center"/>
         <TextBox Name="plata2" Grid.Row="2" Grid.Column="4" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>

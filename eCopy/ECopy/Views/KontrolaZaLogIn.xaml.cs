@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.WindowsAzure.MobileServices;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -33,9 +35,14 @@ namespace ECopy.Views
             this.InitializeComponent();
         }
 
+        async private void GetUsers()
+        {
+            IMobileServiceTable<FizickoLice> tabelaFizickoLice = App.MobileService.GetTable<FizickoLice>();
+            var users = await tabelaFizickoLice.Where(u => u.korisnickoIme == "Bob").ToListAsync();
 
+        }
 
-        private void Potvrdi_Click_1(object sender, RoutedEventArgs e)
+        async private void Potvrdi_Click_1(object sender, RoutedEventArgs e)
         {
             string ime = korisnickoImeBox.Text;
             string sifra = lozinkaBox.Password.ToString();
@@ -55,9 +62,25 @@ namespace ECopy.Views
             }
             else
             {
+                greska1.Text = " ";
                 if (korisnickoImeBox.Text == "administrator" && lozinkaBox.Password.ToString() == "123456789")
                     OnNavigateParentReady(this, null);
-                else OnNavigateParentReady2(this, null);
+                else
+                {
+                    try
+                    {
+                        IMobileServiceTable<FizickoLice> tabelaFizickoLice = App.MobileService.GetTable<FizickoLice>();
+                        List<FizickoLice> users =
+                            await tabelaFizickoLice.Where
+                            (u => u.korisnickoIme == ime).
+                            ToListAsync();
+                    } 
+                    catch(Exception)
+                    {
+                        OnNavigateParentReady2(this, null);
+                    }
+                    greska1.Text = "Netačni podaci, pokušajte ponovo";
+                }
             }
 
 
