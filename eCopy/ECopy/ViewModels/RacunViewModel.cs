@@ -8,13 +8,14 @@ namespace ECopy.ViewModels
 {
     class RacunViewModel
     {
-        //private Racun racun; 
+        private ECopy.Models.Racun racun;
 
-        public void postaviId() { }
-        public void dajId() { }
-        public void postaviBrojNarudzbe() { }
-        public void dajBrojNarudzbe() { }
-        public void postaviDatum() { }
-        public void dajDatum() { }
+        public ECopy.Models.Racun Racun { get => racun; set => racun = value; }
+        public void PostaviId(int id) { racun.IdRacuna = id; }
+        public int DajId() { return racun.IdRacuna; }
+        public void PostaviBrojNarudzbi(int broj) { racun.BrojNarudzbi = broj; }
+        public int DajBrojNarudzbe() { return racun.BrojNarudzbi; }
+        public void PostaviDatum(DateTime date) { racun.DatumIzdavanja = date; }
+        public DateTime DajDatum() { return racun.DatumIzdavanja; }
     }
 }

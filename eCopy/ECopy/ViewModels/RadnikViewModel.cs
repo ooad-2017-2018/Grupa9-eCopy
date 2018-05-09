@@ -8,15 +8,14 @@ namespace ECopy.ViewModels
 {
     class RadnikViewModel
     {
-        //private Radnik radnik;
+        private ECopy.Models.Radnik radnik;
 
-        void getRadnik() { }
-        void setRadnik() { }
-        void postaviIme() { }
-        void dajIme() { }
-        void postaviDatum() { }
-        void postaviSliku() { }
-        void postaviPoziciju() { }
-        void postaviPlatu() { }
+        public ECopy.Models.Radnik Radnik { get => radnik; set => radnik = value; }
+        void PostaviIme(String ime) { radnik.Ime = ime; }
+        string DajIme() { return radnik.Ime; }
+        void PostaviDatum(DateTime date) { radnik.DatumRodjenja = date; }
+        void PostaviPoziciju(string position) { radnik.Pozicija = position; }
+        void PostaviPlatu(float plata) { radnik.Plata = plata; }
     }
 }
+
