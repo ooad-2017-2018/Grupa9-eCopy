@@ -7,14 +7,14 @@ using Windows.UI.Xaml.Controls;
 
 namespace ECopy.Models
 {
-    class IzradaReklamnogMaterijala:Narudzba
+    class IzradaReklamnogMaterijala : Narudzba
     {
         private string predmet;
         private string boja;
         private Image slika;
         private string logo;
 
-        public IzradaReklamnogMaterijala(string predmet, string boja, Image slika, string logo, int idNarudzbe, string vrstaNarudzbe, DateTime datumNarudzbe, string trenutniStatus, int kolicina, bool hitnaNarudzba) : base(idNarudzbe, vrstaNarudzbe, datumNarudzbe, trenutniStatus, kolicina, hitnaNarudzba)
+        public IzradaReklamnogMaterijala(string predmet, string boja, Image slika, string logo, int idNarudzbe, string vrstaNaarudzbe, DateTime datumNarudzbe, string trenutniStatus, int kolicina, bool hitnaNarudzba) : base(idNarudzbe, vrstaNaarudzbe, datumNarudzbe, trenutniStatus, kolicina, hitnaNarudzba)
         {
             this.predmet = predmet;
             this.boja = boja;

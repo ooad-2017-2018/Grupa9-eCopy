@@ -7,13 +7,13 @@ using Windows.UI.Xaml.Controls;
 
 namespace ECopy.Models
 {
-    class IzradaPersonaliziranihPredmeta:Narudzba
+    class IzradaPersonaliziranihPredmeta : Narudzba
     {
         private string predmet;
         private string boja;
         private Image slika;
 
-        public IzradaPersonaliziranihPredmeta(int idNarudzbe, string vrstaNarudzbe, DateTime datumNarudzbe, string trenutniStatus, int kolicina, bool hitnaNarudzba,string predmet, string boja, Image slika):base( idNarudzbe, vrstaNarudzbe,  datumNarudzbe,  trenutniStatus,  kolicina,  hitnaNarudzba)
+        public IzradaPersonaliziranihPredmeta(string predmet, string boja, Image slika, int idNarudzbe, string vrstaNaarudzbe, DateTime datumNarudzbe, string trenutniStatus, int kolicina, bool hitnaNarudzba) : base(idNarudzbe, vrstaNaarudzbe, datumNarudzbe, trenutniStatus, kolicina, hitnaNarudzba)
         {
             this.predmet = predmet;
             this.boja = boja;

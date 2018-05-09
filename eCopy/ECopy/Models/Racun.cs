@@ -14,9 +14,9 @@ namespace ECopy.Models
 
         public Racun(int idRacuna, int brojNarudzbi, DateTime datumIzdavanja)
         {
-            this.idRacuna = idRacuna;
-            this.brojNarudzbi = brojNarudzbi;
-            this.datumIzdavanja = datumIzdavanja;
+            this.IdRacuna = idRacuna;
+            this.BrojNarudzbi = brojNarudzbi;
+            this.DatumIzdavanja = datumIzdavanja;
         }
 
         public int IdRacuna { get => idRacuna; set => idRacuna = value; }

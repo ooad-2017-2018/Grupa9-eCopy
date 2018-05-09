@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace ECopy.Models
 {
-    class IzradaSlika:Narudzba
+    class IzradaSlika : Narudzba
     {
         private string format;
         private string dodatno;
 
-        public IzradaSlika(int idNarudzbe, string vrstaNarudzbe, DateTime datumNarudzbe, string trenutniStatus, int kolicina, bool hitnaNarudzba,string predmet, string boja, Image slika, string dodatno, string format):base(idNarudzbe, vrstaNarudzbe, datumNarudzbe, trenutniStatus, kolicina, hitnaNarudzba)
+        public IzradaSlika(string format, string dodatno, int idNarudzbe, string vrstaNaarudzbe, DateTime datumNarudzbe, string trenutniStatus, int kolicina, bool hitnaNarudzba) : base(idNarudzbe, vrstaNaarudzbe, datumNarudzbe, trenutniStatus, kolicina, hitnaNarudzba)
         {
-            this.format = format;
-            this.dodatno = dodatno;
+            this.Format = format;
+            this.Dodatno = dodatno;
         }
 
         public string Format { get => format; set => format = value; }

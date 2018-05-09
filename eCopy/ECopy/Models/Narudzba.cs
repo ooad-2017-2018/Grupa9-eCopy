@@ -15,25 +15,25 @@ namespace ECopy.Models
         private int kolicina;
         private Boolean hitnaNarudzba;
 
-        public Narudzba(int idNarudzbe, string vrstaNarudzbe, DateTime datumNarudzbe, string trenutniStatus, int kolicina, bool hitnaNarudzba)
+        protected Narudzba(int idNarudzbe, string vrstaNaarudzbe, DateTime datumNarudzbe, string trenutniStatus, int kolicina, bool hitnaNarudzba)
         {
-            this.IdNarudzbe = idNarudzbe;
-            this.VrstaNarudzbe = vrstaNarudzbe;
-            this.DatumNarudzbe = datumNarudzbe;
-            this.TrenutniStatus = trenutniStatus;
-            this.Kolicina = kolicina;
-            this.HitnaNarudzba = hitnaNarudzba;
-        }
-        public Narudzba(int idNarudzbe, string vrstaNarudzbe, DateTime datumNarudzbe, int kolicina, bool hitnaNarudzba)
-        {
-            this.IdNarudzbe = idNarudzbe;
-            this.VrstaNarudzbe = vrstaNarudzbe;
-            this.DatumNarudzbe = datumNarudzbe;
-            
-            this.Kolicina = kolicina;
-            this.HitnaNarudzba = hitnaNarudzba;
+            this.idNarudzbe = idNarudzbe;
+            this.vrstaNarudzbe = vrstaNarudzbe;
+            this.datumNarudzbe = datumNarudzbe;
+            this.trenutniStatus = trenutniStatus;
+            this.kolicina = kolicina;
+            this.hitnaNarudzba = hitnaNarudzba;
         }
 
+        protected Narudzba(int idNarudzbe, string vrstaNaarudzbe, DateTime datumNarudzbe, int kolicina, bool hitnaNarudzba)
+        {
+            this.idNarudzbe = idNarudzbe;
+            this.vrstaNarudzbe = vrstaNarudzbe;
+            this.datumNarudzbe = datumNarudzbe;
+
+            this.kolicina = kolicina;
+            this.hitnaNarudzba = hitnaNarudzba;
+        }
         public int IdNarudzbe { get => idNarudzbe; set => idNarudzbe = value; }
         public string VrstaNarudzbe { get => vrstaNarudzbe; set => vrstaNarudzbe = value; }
         public DateTime DatumNarudzbe { get => datumNarudzbe; set => datumNarudzbe = value; }

@@ -31,5 +31,6 @@ namespace ECopy
         {
             this.Frame.Navigate(typeof(MainPage));
         }
+
     }
 }

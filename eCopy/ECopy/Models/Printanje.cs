@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace ECopy.Models
 {
-    class Printanje:Narudzba
+    class Printanje : Narudzba
     {
         private string format;
         private string uvez;
         private Document dokument;
         private Boolean uBoji;
 
-        public Printanje(string format, string uvez, Document dokument, bool uBoji,int idNarudzbe, string vrstaNarudzbe, DateTime datumNarudzbe, string trenutniStatus, int kolicina, bool hitnaNarudzba, string predmet) : base(idNarudzbe, vrstaNarudzbe, datumNarudzbe, trenutniStatus, kolicina, hitnaNarudzba)
+        public Printanje(string format, string uvez, Document dokument, bool uBoji, int idNarudzbe, string vrstaNaarudzbe, DateTime datumNarudzbe, string trenutniStatus, int kolicina, bool hitnaNarudzba) : base(idNarudzbe, vrstaNaarudzbe, datumNarudzbe, trenutniStatus, kolicina, hitnaNarudzba)
         {
             this.format = format;
             this.uvez = uvez;
