@@ -1,28 +1,33 @@
 ﻿<Page
-    x:Class="ECopy.LogIn"
+    x:Class="ECopy.Views.IzbornikFizickogLica"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:ECopy.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="background.jpg"/>
-        </Grid.Background>
         <Grid.RowDefinitions>
-
+            <RowDefinition Height="100" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="100" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="background.jpg"/>
+        </Grid.Background>
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup x:Name="VisualStateGroup">
                 <VisualState x:Name="Phone">
@@ -51,10 +56,8 @@
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
-        <TextBlock Name="odabir" Text="Prijava:" Grid.Row="0" Grid.ColumnSpan="4" VerticalAlignment="Center"  HorizontalAlignment="Center" FontSize="20"  FontWeight="Bold"/>
-        <local:KontrolaZaLogIn x:Name="login"  Grid.Row="1" Grid.Column="1"/>
-        <Button x:Name="povratak" Content="Povratak"  Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" Click="povratak_Click"/>
-
-
+        <Button Name="odabirNarudzbe" Content="Obavi narudžbu"  Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" Click="odabirNarudzbe_Click"/>
+        <Button Name="promjenaPodataka" Content="Promijeni podatke"  Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" Click="promjenaPodataka_Click"/>
+        <Button Name="povratakNaLogIn" Content="Povratak"  Grid.Row="7" Grid.Column="0" HorizontalAlignment="Center" Click="povratakNaLogIn_Click"/>
     </Grid>
 </Page>

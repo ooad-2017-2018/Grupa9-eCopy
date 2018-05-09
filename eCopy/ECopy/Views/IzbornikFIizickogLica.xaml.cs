@@ -1,5 +1,4 @@
-﻿using ECopy.Views;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -16,34 +15,31 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace ECopy
+namespace ECopy.Views
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class LogIn : Page
+    public sealed partial class IzbornikFizickogLica : Page
     {
-        public LogIn()
+        public IzbornikFizickogLica()
         {
             this.InitializeComponent();
-            login.OnNavigateParentReady += Login_OnNavigateParentReady;
-            login.OnNavigateParentReady2 += Login_OnNavigateParentReady2;
         }
 
-        private void Login_OnNavigateParentReady2(object source, EventArgs e)
+        private void odabirNarudzbe_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(IzbornikFizickogLica));
+            this.Frame.Navigate(typeof(OdabirNarudzbe));
         }
 
-        private void Login_OnNavigateParentReady(object source, EventArgs e)
+        private void promjenaPodataka_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(RegistracijaRadnika));
+            this.Frame.Navigate(typeof(PromjenaKorisnickihPodataka));
         }
 
-        private void povratak_Click(object sender, RoutedEventArgs e)
+        private void povratakNaLogIn_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(MainPage));
+            this.Frame.Navigate(typeof(LogIn));
         }
-
     }
 }

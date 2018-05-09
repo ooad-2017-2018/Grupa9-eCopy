@@ -6,6 +6,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Storage.Streams;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -22,23 +23,44 @@ namespace ECopy.Views
 {
     public sealed partial class KontrolaZaLogIn : UserControl
     {
+        public delegate void MyEventHandler(object source, EventArgs e);
+
+        public event MyEventHandler OnNavigateParentReady;
+        public event MyEventHandler OnNavigateParentReady2;
+
         public KontrolaZaLogIn()
         {
             this.InitializeComponent();
         }
 
-        private async void Potvrdi_Click(object sender, RoutedEventArgs e)
-        {
-            RegistracijaRadnika r = new RegistracijaRadnika();
 
-
-
-
-        }
 
         private void Potvrdi_Click_1(object sender, RoutedEventArgs e)
         {
-            Potvrdi_Click(sender, e);
+            string ime = korisnickoImeBox.Text;
+            string sifra = lozinkaBox.Password.ToString();
+            greska1.Foreground = new SolidColorBrush(Colors.Red);
+
+            if (ime.Length == 0 || sifra.Length == 0)
+            {
+                greska1.Text = "Morate popuniti sva polja!";
+            }
+            else if (sifra.Length <= 3)
+            {
+                greska1.Text = "Lozinka mora imati više od tri znaka!";
+            }
+            else if (ime.Length <= 3)
+            {
+                greska1.Text = "Korisničko ime mora imati više od tri znaka!";
+            }
+            else
+            {
+                if (korisnickoImeBox.Text == "administrator" && lozinkaBox.Password.ToString() == "123456789")
+                    OnNavigateParentReady(this, null);
+                else OnNavigateParentReady2(this, null);
+            }
+
+
         }
     }
 }

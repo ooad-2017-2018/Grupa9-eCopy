@@ -27,6 +27,6 @@
         <TextBox x:Name="korisnickoImeBox" Grid.Row="0" Grid.Column="2" VerticalAlignment="Top" />
         <PasswordBox Name="lozinkaBox" Grid.Row="1" Grid.Column="2" VerticalAlignment="Top" RequestedTheme="Default" Visibility="Visible" />
         <Button x:Name="potvrdi" Content="Potvrdi" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" Click="Potvrdi_Click_1"/>
-
+        <TextBlock Name="greska1" Text=" " Grid.Row="2" Grid.Column="3" HorizontalAlignment="Center" FontStyle="Oblique" FontStretch="Normal" OpticalMarginAlignment="None" TextTrimming="None" FontSize="9"/>
     </Grid>
 </UserControl>
