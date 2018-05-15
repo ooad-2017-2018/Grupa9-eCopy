@@ -67,18 +67,18 @@ namespace ECopy.Views
                     OnNavigateParentReady(this, null);
                 else
                 {
-                    try
-                    {
+                    //try
+                    //{
                         IMobileServiceTable<FizickoLice> tabelaFizickoLice = App.MobileService.GetTable<FizickoLice>();
                         List<FizickoLice> users =
                             await tabelaFizickoLice.Where
                             (u => u.korisnickoIme == ime).
                             ToListAsync();
-                    } 
-                    catch(Exception)
+                    //} 
+                    /*catch(Exception)
                     {
                         OnNavigateParentReady2(this, null);
-                    }
+                    */
                     greska1.Text = "Netačni podaci, pokušajte ponovo";
                 }
             }
