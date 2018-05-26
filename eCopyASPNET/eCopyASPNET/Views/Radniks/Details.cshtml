@@ -1,0 +1,82 @@
+﻿@model eCopyASPNET.Models.Radnik
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Radnik</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prezime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prezime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.korisnickoIme)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.korisnickoIme)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lozinka)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lozinka)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pozicija)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pozicija)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.plata)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.plata)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.datumRodjenja)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.datumRodjenja)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.slika)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.slika)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RadnikId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

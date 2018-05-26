@@ -1,0 +1,74 @@
+﻿@model eCopyASPNET.Models.Narudzba
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Narudzba</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Racun.RacunId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Racun.RacunId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Radnik.ime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Radnik.ime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.vrstaNarudzbe)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vrstaNarudzbe)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.datumNarudzbe)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.datumNarudzbe)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.trenutniStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.trenutniStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.kolicina)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.kolicina)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hitnaNarudzba)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hitnaNarudzba)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.NarudzbaId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

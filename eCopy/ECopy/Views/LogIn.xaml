@@ -52,7 +52,7 @@
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
         <TextBlock Name="odabir" Text="Prijava:" Grid.Row="0" Grid.ColumnSpan="4" VerticalAlignment="Center"  HorizontalAlignment="Center" FontSize="20"  FontWeight="Bold"/>
-        <local:KontrolaZaLogIn x:Name="login"  Grid.Row="1" Grid.Column="1"/>
+        <local:KontrolaZaLogIn x:Name="login"  Grid.Row="1" Grid.Column="1" Loaded="login_Loaded"/>
         <Button x:Name="povratak" Content="Povratak"  Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" Click="povratak_Click"/>
 
 

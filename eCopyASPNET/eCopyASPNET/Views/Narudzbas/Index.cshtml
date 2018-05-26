@@ -1,0 +1,69 @@
+﻿@model IEnumerable<eCopyASPNET.Models.Narudzba>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Racun.RacunId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Radnik.ime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.vrstaNarudzbe)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.datumNarudzbe)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.trenutniStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.kolicina)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hitnaNarudzba)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Racun.RacunId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Radnik.ime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.vrstaNarudzbe)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.datumNarudzbe)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.trenutniStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.kolicina)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hitnaNarudzba)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.NarudzbaId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.NarudzbaId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.NarudzbaId })
+        </td>
+    </tr>
+}
+
+</table>

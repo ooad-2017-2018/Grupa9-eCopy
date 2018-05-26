@@ -45,5 +45,9 @@ namespace ECopy
             this.Frame.Navigate(typeof(MainPage));
         }
 
+        private void login_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
