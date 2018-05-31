@@ -1,0 +1,42 @@
+Singleton Pattern
+
+Singleton patern koristimo kada postoji više objekata koje je potrebno
+samo jednom instancirati i koji se koriste kao jedinstven objekat. Koriste
+se npr. za thread pools. Ovim patternom se omoguæava jedinstveno kreiranje i jedinstveno upravljanje 
+nekim èesto potrebnim objektom. Takoðer za instanciranje objekta moguæe je
+koristiti lazy instatiation(naèin da se objekat instancira tek pri prvom 
+korištenju objekta). 
+
+U našem projektu ovaj patern nije iskorišten i ne bi se mogao iskoristiti zato što
+nemamo takav tip klase èija æe se jedna instanca klase koristiti u cijelom projektu
+
+
+Factory Method 
+
+Factory Method pattern omoguæava kreiranje objekata tako da podklase odluèe koju 
+klasu instancirati. Ovako se instancira odgovarajuæa podklasa preko posebne 
+metode koja se naziva FactoryMethod(). Npr. potrebno je kreirati razlièit
+objekat u zavisnosti od vremena i slièno. Odnosno razlièito upravljanje u 
+zavisnosti od nekih parametara.Factory Method definira interfejs za kreiranje objekta ali ostavlja izbor 
+tip njegovim podklasama. Osnovni elementi su interfejs za preodukte IProduct,
+produkti koji implementiraju taj interfejs i klasa Creator koja ima metodu 
+FactoryMethod koja odluèuje koju klasu instancirati.
+
+U našem programu bi se mogao iskoristiti ovaj pattern. Klijent bira koja mu je usluga potrebna, te shodno tome, 
+vrši se narudžba za printanje, izradu slika, izradu personaliziranih predmeta ili izrada reklamnog materijala 
+(tj. Cetiri nacina odabira narudze, koja su veoma slicna)- moze se napraviti interface koji te klase imolementiraju. 
+Potrebno je dodati jednu klasu creator 
+koja bi imala metodu FactoryMethod koja vraca tip narudzbe u odnosu na poslanu opciju
+
+Observer patern
+
+Uloga Observer paterna je da uspostavi
+relaciju izmeðu objekata tako kada jedan
+objekat promijeni stanje, drugi zainteresirani
+objekti se obavještavaju.
+
+Ovaj patern ne koristimo u projektu, ali bismo ga mogli koristiti ukoliko bi uveli mogucnost da se korisnici obavjestavaju o 
+novim (tek dodanim) pogodnostima koje aplikacija nudi (npr nova vrsta narudzbe, dodatni popusti i sl.). Potrebno je dodati klasu koja
+mijenja svoje stanje i vrsu Update 
+i interfejs koji  sadrži samo jednu metodu (Update) koja se
+poziva kada se promijeni stanje instance. Taj interface bi mogla implementirati klasa Korisnik.
