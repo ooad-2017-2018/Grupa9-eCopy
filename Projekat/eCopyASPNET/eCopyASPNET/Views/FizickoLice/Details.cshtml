@@ -1,0 +1,74 @@
+﻿@model eCopyASPNET.Models.FizickoLice
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>FizickoLice</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prezime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prezime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.adresa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.adresa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.korisnickoIme)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.korisnickoIme)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lozinka)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lozinka)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.datumRodjenja)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.datumRodjenja)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.FizickoLiceId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

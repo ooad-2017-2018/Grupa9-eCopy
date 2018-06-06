@@ -1,0 +1,90 @@
+﻿@model eCopyASPNET.Models.IzradaPersonaliziranihPredmeta
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>IzradaPersonaliziranihPredmeta</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Racun.RacunId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Racun.RacunId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Radnik.ime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Radnik.ime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.datumNarudzbe)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.datumNarudzbe)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.trenutniStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.trenutniStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.kolicina)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.kolicina)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hitnaNarudzba)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hitnaNarudzba)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.predmet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.predmet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.boja)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.boja)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.slika)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.slika)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IzradaPersonaliziranihPredmetaId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

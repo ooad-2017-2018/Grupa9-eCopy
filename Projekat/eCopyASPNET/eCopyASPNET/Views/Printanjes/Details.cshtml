@@ -1,0 +1,98 @@
+﻿@model eCopyASPNET.Models.Printanje
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Printanje</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Racun.RacunId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Racun.RacunId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Radnik.ime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Radnik.ime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.datumNarudzbe)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.datumNarudzbe)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.trenutniStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.trenutniStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.kolicina)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.kolicina)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hitnaNarudzba)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hitnaNarudzba)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.format)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.format)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.uvez)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.uvez)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dokument)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dokument)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.uBoji)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.uBoji)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PrintanjeId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

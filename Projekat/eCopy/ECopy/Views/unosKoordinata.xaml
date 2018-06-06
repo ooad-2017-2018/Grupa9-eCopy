@@ -1,0 +1,89 @@
+﻿<Page
+    x:Class="ECopy.Views.unosKoordinata"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ECopy.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="background.jpg"/>
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="Phone">
+                    <VisualState.Setters>
+
+
+                        <Setter Target="odabir.(TextBlock.FontSize)" Value="20"/>
+
+
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:Name="Tablet">
+                    <VisualState.Setters>
+
+
+                        <Setter Target="odabir.(TextBlock.FontSize)" Value="26"/>
+
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="600"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:Name="Desktop">
+                    <VisualState.Setters>
+
+                        <Setter Target="odabir.(TextBlock.FontSize)" Value="30"/>
+
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="800"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <TextBlock Name="odabir" Text="Unesi koordinate" Grid.Row="0" Grid.ColumnSpan="8" HorizontalAlignment="Center" FontSize="20" VerticalAlignment="Bottom" FontWeight="Bold"/>
+
+        <TextBlock Name="IDnarudzbe" Text="ID narudžbe:" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center"/>
+        <TextBlock Name="Longitude" Text="Longitude:" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Center"/>
+        <TextBox Name="IDnarudzbe2" Grid.Row="3" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
+        <TextBox Name="longitude2" Grid.Row="5" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
+
+        <TextBlock Name="Latitude" Text="Latitude:" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Center"/>
+        <TextBox Name="latitude2" Grid.Row="6" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
+
+        
+        <Button Name="potvrda" Content="Potvrdi"  Grid.Row="10" Grid.Column="2" HorizontalAlignment="Right" Width="100" Height="50" Click="potvrda_Click"/>
+        <Button Name="povratak" Content="Povratak"  Grid.Row="10" Grid.Column="1" HorizontalAlignment="Left" Width="100" Height="50" Click="povratak_Click"/>
+    </Grid>
+</Page>

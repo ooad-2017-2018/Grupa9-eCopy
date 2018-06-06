@@ -1,0 +1,88 @@
+﻿@model eCopyASPNET.Models.Radnik
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Radnik</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prezime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prezime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.korisnickoIme)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.korisnickoIme)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lozinka)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lozinka)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pozicija)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pozicija)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.plata)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.plata)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.datumRodjenja)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.datumRodjenja)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.slika)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.slika)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

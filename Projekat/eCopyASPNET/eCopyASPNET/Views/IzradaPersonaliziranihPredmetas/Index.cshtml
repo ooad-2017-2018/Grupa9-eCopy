@@ -1,0 +1,81 @@
+﻿@model IEnumerable<eCopyASPNET.Models.IzradaPersonaliziranihPredmeta>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Racun.RacunId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Radnik.ime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.datumNarudzbe)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.trenutniStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.kolicina)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hitnaNarudzba)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.predmet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.boja)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.slika)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Racun.RacunId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Radnik.ime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.datumNarudzbe)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.trenutniStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.kolicina)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hitnaNarudzba)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.predmet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.boja)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.slika)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IzradaPersonaliziranihPredmetaId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IzradaPersonaliziranihPredmetaId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IzradaPersonaliziranihPredmetaId })
+        </td>
+    </tr>
+}
+
+</table>

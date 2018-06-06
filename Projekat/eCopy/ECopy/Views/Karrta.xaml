@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="ECopy.Views.Karrta"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ECopy.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps"
+    mc:Ignorable="d">
+
+
+    <Grid
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Maps:MapControl Name="eCopyMapa"
+                         
+                         MapServiceToken="PMhBrYKQjoERvmLSv9Wz~wWbxd1nTF6qoI17ZrmbKxg~AnbKN2X-djmou_8yeAJ7UeA4MaI8ulN3Nv81TtAMpRSshdnaL0FoDEsHywfWG-Gj"
+                         MapTapped="eCopyMapa_MapTapped"
+                         ></Maps:MapControl>
+    </Grid>
+    <Page.BottomAppBar>
+        <AppBar IsOpen="True" IsSticky="True">
+            <StackPanel Orientation="Horizontal">
+                <AppBarButton Icon="Map" Label="Location" Click="AppBarButton_Click"/>
+                <AppBarButton Icon="Back" Label="Back" Click="Back_Click"/>
+            </StackPanel>
+        </AppBar>
+    </Page.BottomAppBar>
+</Page>
