@@ -8,6 +8,7 @@ using Windows.Foundation.Collections;
 using Windows.Storage;
 using Windows.Storage.Pickers;
 using Windows.Storage.Streams;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -28,7 +29,17 @@ namespace ECopy.Views
             this.InitializeComponent();
         }
         
-
+        private async void ucitajSliku(Windows.Storage.StorageFile file)
+        {
+             using (IRandomAccessStream fileStream = await file.OpenAsync(Windows.Storage.FileAccessMode.Read))
+                {
+                    // Set the image source to the selected bitmap 
+                    BitmapImage bitmapImage = new BitmapImage();
+                    bitmapImage.DecodePixelWidth = 600; //match the target Image.Width, not shown
+                    await bitmapImage.SetSourceAsync(fileStream);
+                    slika1.Source = bitmapImage;
+                }
+        }
         private async void Potvrdi_Click(object sender, RoutedEventArgs e)
         {
             var picker = new Windows.Storage.Pickers.FileOpenPicker();
@@ -39,36 +50,13 @@ namespace ECopy.Views
             picker.FileTypeFilter.Add(".png");
 
             Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();
-            if (file != null)
+            if (file != null) ucitajSliku(file);
+            else
             {
-                using (IRandomAccessStream fileStream = await file.OpenAsync(Windows.Storage.FileAccessMode.Read))
-                {
-                    // Set the image source to the selected bitmap 
-                    BitmapImage bitmapImage = new BitmapImage();
-                    bitmapImage.DecodePixelWidth = 600; //match the target Image.Width, not shown
-                    await bitmapImage.SetSourceAsync(fileStream);
-                    slika1.Source = bitmapImage;
-                }
+                var message = new MessageDialog("Ne moze se naci ruta");
+                await message.ShowAsync();
             }
-
-                    /*FileOpenPicker open = new FileOpenPicker();
-                    // Open a stream for the selected file 
-                    StorageFile file = await open.PickSingleFileAsync();
-                    // Ensure a file was selected 
-                    if (file != null)
-                    {
-                        using (IRandomAccessStream fileStream = await file.OpenAsync(Windows.Storage.FileAccessMode.Read))
-                        {
-                            // Set the image source to the selected bitmap 
-                            BitmapImage bitmapImage = new BitmapImage();
-                            bitmapImage.DecodePixelWidth = 600; //match the target Image.Width, not shown
-                            await bitmapImage.SetSourceAsync(fileStream);
-                            //Scenario2Image.Source = bitmapImage;
-                        }
-                    }*/
-
-
-                }
+        }
 
         private void Potvrdi_Click_1(object sender, RoutedEventArgs e)
         {

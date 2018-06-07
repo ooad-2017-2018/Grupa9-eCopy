@@ -12,6 +12,7 @@ namespace eCopyASPNET.Migrations
             AutomaticMigrationsEnabled = true;
         }
 
+
         protected override void Seed(eCopyASPNET.Models.OOADContext context)
         {
             //  This method will be called after migrating to the latest version.

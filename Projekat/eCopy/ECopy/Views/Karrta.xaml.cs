@@ -29,6 +29,9 @@ namespace ECopy.Views
     /// </summary>
     public sealed partial class Karrta : Page
     {
+
+        public const double lokacijaKopirniceLongitude = 18.3770994009617;
+        public const double lokacijaKopirniceLatitude = 43.8911123782028;
         public Models.Library Library = new Models.Library();
         public int indexPosition = 1;
         public Karrta()
@@ -37,8 +40,8 @@ namespace ECopy.Views
         }
         protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
-            float lo=0;
-            float la=0;
+            double lo=lokacijaKopirniceLongitude;
+            double la=lokacijaKopirniceLatitude;
             foreach (Narudzba n in KontejnerskaKlasa.narudzbe)
             {
                 if (n.IdNarudzbe == KontejnerskaKlasa.i) { lo = n.pozicijaLongitude; la = n.pozicijaLatitude; }
@@ -50,8 +53,6 @@ namespace ECopy.Views
             BasicGeoposition pozicijaNarudzbe = new BasicGeoposition();
             pozicijaNarudzbe.Longitude = lo;
             pozicijaNarudzbe.Latitude = la;
-            /*pozicijaNarudzbe.Longitude = 18.3770994009617;
-            pozicijaNarudzbe.Latitude = 43.8911123782028;*/
             Geopoint kraj = new Geopoint(pozicijaNarudzbe);
             dodajIkonuNaPoziciju(kraj, "Lokacija narudzbe: " + indexPosition);
             PrikaziRutu(myPoint, kraj); //crtaj na klik

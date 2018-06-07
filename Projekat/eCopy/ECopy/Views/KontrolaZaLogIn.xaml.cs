@@ -79,20 +79,7 @@ namespace ECopy.Views
                     Boolean b = await flvm.nadjiKorisnika(korisnickoImeBox.Text, lozinkaBox.Password.ToString());
                     if(b) OnNavigateParentReady2(this, null);
                     else greska1.Text = "Netačni podaci, pokušajte ponovo";
-                    /*  try
-                      {
-                          IMobileServiceTable<Models.FizickoLice> tabelaFizickoLice = App.MobileService.GetTable<Models.FizickoLice>();
-                          List<Models.FizickoLice> users =
-                              await tabelaFizickoLice.Where
-                              (u => u.korisnickoIme == ime).
-                              ToListAsync();
-                      }
-                      catch (Exception)
-                      {
-                          OnNavigateParentReady2(this, null);
-                      }
-                      greska1.Text = "Netačni podaci, pokušajte ponovo";
-                  */
+                   
                 }
             }
 

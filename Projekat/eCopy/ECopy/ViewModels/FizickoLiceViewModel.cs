@@ -20,7 +20,7 @@ namespace ECopy.ViewModels
     {
         private ECopy.Models.FizickoLice korisnik;
         private static readonly HttpClient client = new HttpClient();
-        public static string httprequest="http://localhost/ecopyapi/";
+        public static string httprequest= "http://ecopyrestapi20180606065004.azurewebsites.net/";
 
         public async Task<bool> Registruj(string ime, string prezime, string adresa, string email, string korisnickoIme, string lozinka, DateTime datum)
         {
@@ -113,11 +113,9 @@ namespace ECopy.ViewModels
             List<FizickoLice> korisnici = new List<FizickoLice>();
             using (var client = new HttpClient())
             {
-                //Singleton client = Singleton.getInstance();
-                //Postavljanje adrese URL od web api servisa
+
                 client.BaseAddress = new Uri(httprequest);
                 client.DefaultRequestHeaders.Clear();
-                //services.AddSingleton<HttpClient>(client);
 
                 //definisanje formata koji želimo prihvatiti
                 client.DefaultRequestHeaders.Accept.Add(new

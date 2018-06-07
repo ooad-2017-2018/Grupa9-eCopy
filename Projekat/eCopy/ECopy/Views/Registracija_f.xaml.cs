@@ -27,6 +27,7 @@ namespace ECopy
     public sealed partial class Registracija_f : Page
     {
         IMobileServiceTable<Models.FizickoLice> tabelaFizickoLice = App.MobileService.GetTable<Models.FizickoLice>();
+        //Models.SingletonFizickoLice tabelaFizickoLice = App.MobileService.GetTable<Models.F>
         ViewModels.FizickoLiceViewModel flvm;
         public Registracija_f()
         {
