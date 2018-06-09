@@ -26,13 +26,13 @@ namespace ECopy.Views
     public sealed partial class PromjenaKorisnickihPodataka : Page
     {
         public string trenutniUser;
-        ViewModels.FizickoLiceViewModel flvm;
+        ViewModels.FizickoLiceViewModel flvm= ViewModels.FizickoLiceViewModel.getInstance();
         public PromjenaKorisnickihPodataka()
            
         {
             
             this.InitializeComponent();
-            flvm = new ViewModels.FizickoLiceViewModel();
+            //flvm = new ViewModels.FizickoLiceViewModel();
 
         }
 
@@ -48,38 +48,15 @@ namespace ECopy.Views
 
 
             greska1.Foreground = new SolidColorBrush(Colors.Red);
+           
+            if (MainPage.Validacija(adresa, email, korisnicko, lozinka, potvrda, greska1))
 
-            if (adresa.Length == 0 || email.Length == 0 || korisnicko.Length == 0)
-            {
-                greska1.Text = "Morate popuniti sva polja!";
-            }
-            else if (lozinka.Length <= 3)
-            {
-                greska1.Text = "Lozinka mora imati više od tri znaka!";
-            }
-            else if (korisnicko.Length <= 3)
-            {
-                greska1.Text = "Korisničko ime mora imati više od tri znaka!";
-            }
-            else if (!email.Contains("@") || !email.Contains("."))
-            {
-                greska1.Text = "Neispravan format emaila!";
-            }
-            else if (!lozinka.Equals(potvrda))
-            {
-                greska1.Text = "Lozinke se ne podudaraju!";
-            }
-
-            else
             {
                 greska1.Text = " ";
-
                 Boolean b = await flvm.promjenaPassword(Models.FizickoLice.trenutniUser, lozinka);
-                
-
                 if (b)
                 {
-                    MessageDialog showDialog = new MessageDialog("Promjena šifre uspješno završena" );
+                    MessageDialog showDialog = new MessageDialog("Promjena šifre uspješno završena");
                     await showDialog.ShowAsync();
                 }
             }

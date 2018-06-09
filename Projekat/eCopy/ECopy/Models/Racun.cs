@@ -22,5 +22,14 @@ namespace ECopy.Models
         public int IdRacuna { get => idRacuna; set => idRacuna = value; }
         public int BrojNarudzbi { get => brojNarudzbi; set => brojNarudzbi = value; }
         public DateTime DatumIzdavanja { get => datumIzdavanja; set => datumIzdavanja = value; }
+        public double iznos { get; set; }
+    }
+
+    class Adapter
+    {
+        public double dodajPdvZaBiH(double iznos)
+        {
+            return iznos * 0.17 + iznos;
+        }
     }
 }

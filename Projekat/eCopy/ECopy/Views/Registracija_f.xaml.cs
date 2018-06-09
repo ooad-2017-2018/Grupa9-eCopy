@@ -28,11 +28,11 @@ namespace ECopy
     {
         IMobileServiceTable<Models.FizickoLice> tabelaFizickoLice = App.MobileService.GetTable<Models.FizickoLice>();
         //Models.SingletonFizickoLice tabelaFizickoLice = App.MobileService.GetTable<Models.F>
-        ViewModels.FizickoLiceViewModel flvm;
+        ViewModels.FizickoLiceViewModel flvm = ViewModels.FizickoLiceViewModel.getInstance();
         public Registracija_f()
         {
             this.InitializeComponent();
-            flvm = new ViewModels.FizickoLiceViewModel();
+            //flvm = new ViewModels.FizickoLiceViewModel();
         }
 
         private void registracijaZaFirmu_Click(object sender, RoutedEventArgs e)
@@ -66,23 +66,7 @@ namespace ECopy
             {
                 greska1.Text = "Morate popuniti sva polja!";
             }
-            else if (lozinka.Length <= 3)
-            {
-                greska1.Text = "Lozinka mora imati više od tri znaka!";
-            }
-            else if (korisnicko.Length <= 3)
-            {
-                greska1.Text = "Korisničko ime mora imati više od tri znaka!";
-            }
-            else if (!email.Contains("@") || !email.Contains("."))
-            {
-                greska1.Text = "Neispravan format emaila!";
-            }
-            else if (!lozinka.Equals(potvrda))
-            {
-                greska1.Text = "Lozinke se ne podudaraju!";
-            }            
-            else
+            else if (MainPage.Validacija(adresa, email, korisnicko, lozinka, potvrda, greska1))
             {
                 greska1.Text = " ";
                 Models.FizickoLice novo = new Models.FizickoLice();

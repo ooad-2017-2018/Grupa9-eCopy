@@ -10,13 +10,7 @@ namespace ECopy.ViewModels
     class RadnikViewModel
     {
         private ECopy.Models.Radnik korisnik;
-
-       /* public ECopy.Models.Radnik Radnik { get => radnik; set => radnik = value; }
-        void PostaviIme(String ime) { radnik.Ime = ime; }
-        string DajIme() { return radnik.Ime; }
-        void PostaviDatum(DateTime date) { radnik.DatumRodjenja = date; }
-        void PostaviPoziciju(string position) { radnik.Pozicija = position; }
-        void PostaviPlatu(float plata) { radnik.Plata = plata; }*/
+        
 
         public async Task<bool> Registruj(string Password, string Username, string FirstName, string LastName, string Position, DateTime DateOfBirth)
         {

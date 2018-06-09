@@ -24,7 +24,7 @@ namespace ECopy
     /// </summary>
     public sealed partial class LogIn : Page
     {
-        FizickoLiceViewModel flvm = new FizickoLiceViewModel();
+        FizickoLiceViewModel flvm = FizickoLiceViewModel.getInstance();
 
         public LogIn()
         {

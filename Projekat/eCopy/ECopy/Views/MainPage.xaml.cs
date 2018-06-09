@@ -22,6 +22,35 @@ namespace ECopy
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        public static bool Validacija(string adresa, string email, string korisnicko, string lozinka, string potvrda, TextBlock greska1)
+        {
+            if (adresa.Length == 0 || email.Length == 0 || korisnicko.Length == 0)
+            {
+                greska1.Text = "Morate popuniti sva polja!";
+                return false;
+            }
+            else if (lozinka.Length <= 3)
+            {
+                greska1.Text = "Lozinka mora imati više od tri znaka!";
+                return false;
+            }
+            else if (korisnicko.Length <= 3)
+            {
+                greska1.Text = "Korisničko ime mora imati više od tri znaka!";
+                return false;
+            }
+            else if (!email.Contains("@") || !email.Contains("."))
+            {
+                greska1.Text = "Neispravan format emaila!";
+                return false;
+            }
+            else if (!lozinka.Equals(potvrda))
+            {
+                greska1.Text = "Lozinke se ne podudaraju!";
+                return false;
+            }
+            return true;
+        }
         public MainPage()
         {
             this.InitializeComponent();

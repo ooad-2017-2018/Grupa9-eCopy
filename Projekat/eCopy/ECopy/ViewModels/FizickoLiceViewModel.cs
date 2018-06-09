@@ -22,7 +22,26 @@ namespace ECopy.ViewModels
         private static readonly HttpClient client = new HttpClient();
         public static string httprequest= "http://ecopyrestapi20180606065004.azurewebsites.net/";
 
-        public async Task<bool> Registruj(string ime, string prezime, string adresa, string email, string korisnickoIme, string lozinka, DateTime datum)
+
+        // static varijabla koja čuva instancu Singleton klase
+        private static FizickoLiceViewModel uniqueInstance;
+        // privatni konstruktor klase-samo ova tj. Singleton klasa može instancirati ovaj objekat
+        private FizickoLiceViewModel() { }
+        public static FizickoLiceViewModel getInstance()
+        {
+            if (uniqueInstance == null)
+            {
+                // instanciranje objekta Singleton klase
+                //ako nikad nije potrebna instanca neće biti nikad kreirana-lazzy implementation
+                 uniqueInstance = new FizickoLiceViewModel();
+            }
+            return uniqueInstance;
+        }
+
+
+
+        public async Task<bool> Registruj(string ime, string prezime, string adresa, string email, 
+            string korisnickoIme, string lozinka, DateTime datum)
         {
             Windows.Web.Http.HttpClient httpClient = new Windows.Web.Http.HttpClient();
             var headers = httpClient.DefaultRequestHeaders;
@@ -41,7 +60,10 @@ namespace ECopy.ViewModels
             //await showDialog.ShowAsync();
             korisnik = new Models.FizickoLice(ime, prezime, adresa, email, korisnickoIme, lozinka, datum);
 
-            Uri requestUri = new Uri("http://localhost:60625/FizickoLice/Add/" + "?ime=" + korisnik.Ime + "&prezime=" + korisnik.prezime + "&adresa=" + korisnik.adresa + "&email=" + korisnik.email + "&korisnickoIme=" + korisnik.korisnickoIme + "&lozinka=" + korisnik.lozinka + "&datum=" + korisnik.datumRodjenja);
+            Uri requestUri = new Uri("http://localhost:60625/FizickoLice/Add/" + "?ime=" + korisnik.Ime + 
+                "&prezime=" + korisnik.prezime + "&adresa=" + korisnik.adresa + "&email=" + korisnik.email + 
+                "&korisnickoIme=" + korisnik.korisnickoIme + "&lozinka=" + korisnik.lozinka + "&datum=" + 
+                korisnik.datumRodjenja);
             Windows.Web.Http.HttpResponseMessage httpResponse = new Windows.Web.Http.HttpResponseMessage();
             string httpResponseBody = "";
 
@@ -136,6 +158,7 @@ namespace ECopy.ViewModels
                 {
                     if (f.korisnickoIme.Equals(username) && f.lozinka.Equals(lozinka)) return true;
                 }
+
                 return false;
             }
         }

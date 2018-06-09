@@ -39,6 +39,8 @@ namespace ECopy.Views
             float longitude = float.Parse(longitude2.Text);
             float latitude = float.Parse(latitude2.Text);
 
+            Narudzba nova = new IzradaSlika(" ", "3", 1, "izradaSlika", default(DateTime), "u obradi", 2, true);
+            KontejnerskaKlasa.narudzbe.Add(nova);
             foreach (Narudzba n in KontejnerskaKlasa.narudzbe)
             {
                 if (n.IdNarudzbe == id)

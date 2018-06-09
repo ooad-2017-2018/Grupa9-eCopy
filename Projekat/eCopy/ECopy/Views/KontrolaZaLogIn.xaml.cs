@@ -27,7 +27,7 @@ namespace ECopy.Views
     public sealed partial class KontrolaZaLogIn : UserControl
     {
 
-        FizickoLiceViewModel flvm;
+        FizickoLiceViewModel flvm = FizickoLiceViewModel.getInstance();
 
         public delegate void MyEventHandler(object source, EventArgs e);
 
@@ -75,7 +75,7 @@ namespace ECopy.Views
                     OnNavigateParentReady(this, null);
                 else
                 {
-                    flvm = new FizickoLiceViewModel();
+                    //flvm = new FizickoLiceViewModel();
                     Boolean b = await flvm.nadjiKorisnika(korisnickoImeBox.Text, lozinkaBox.Password.ToString());
                     if(b) OnNavigateParentReady2(this, null);
                     else greska1.Text = "Netačni podaci, pokušajte ponovo";

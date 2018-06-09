@@ -65,27 +65,11 @@ namespace ECopy
             {
                 greska1.Text = "Morate popuniti sva polja!";
             }
-            else if (lozinka.Length <= 3)
-            {
-                greska1.Text = "Lozinka mora imati više od tri znaka!";
-            }
-            else if (korisnicko.Length <= 3)
-            {
-                greska1.Text = "Korisničko ime mora imati više od tri znaka!";
-            }
-            else if (!email.Contains("@") || !email.Contains("."))
-            {
-                greska1.Text = "Neispravan format emaila!";
-            }
-            else if (!lozinka.Equals(potvrda))
-            {
-                greska1.Text = "Lozinke se ne podudaraju!";
-            }
             else if (!IsDigitsOnly(racun) || racun.Length<=8)
             {
                 greska1.Text = "Neispravan broj racuna!";
             }
-            else
+            else if (MainPage.Validacija(adresa, email, korisnicko, lozinka, potvrda, greska1))
             {
                 greska1.Text = " ";
                 Firma novo = new Firma(naziv, ime, prezime, adresa, email, 000, korisnicko, lozinka, 000);
